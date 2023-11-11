@@ -11,25 +11,35 @@
                         <div class="col-6">
                             <div class="card p-2 m-1">
                                 <h6 class="card-text">Sales Today</h6>
-                                <h6 class="card-text custom-number-font">4,600</h6>
+                                <h6 class="card-text custom-number-font">
+                                    <?= $sales_today ?>
+                                </h6>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="card p-2 m-1">
                                 <h6 class="card-text">Monthly Sales</h6>
-                                <h6 class="card-text custom-number-font">20,000</h6>
+                                <h6 class="card-text custom-number-font">
+                                    <?= $sales_month ?>
+                                </h6>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="card p-2 m-1">
                                 <h6 class="card-text">Clients</h6>
-                                <h6 class="card-text custom-number-font">13/14|27</h6>
+                                <h6 class="card-text custom-number-font">
+                                    <?= $total_client_tattoo ?> |
+                                    <?= $total_client_piercing ?> =
+                                    <?= $total_clients ?>
+                                </h6>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="card p-2 m-1">
                                 <h6 class="card-text">Profit</h6>
-                                <h6 class="card-text custom-number-font">4,000</h6>
+                                <h6 class="card-text custom-number-font">
+                                    <?= $sales_month - 15000 ?>
+                                </h6>
                             </div>
                         </div>
                     </div>

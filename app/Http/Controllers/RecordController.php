@@ -24,7 +24,7 @@ class RecordController extends Controller
     public function index()
     {
         return view('record.index', [
-            'records' => Record::all()
+            'records' => Record::with('artist', 'service', 'appointment')->get()
         ]);
     }
 

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecordController;
+use App\Http\Controllers\ArtistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+#records route
+Route::get('/records', [RecordController::class, 'index']);
+Route::get('/record/add', [RecordController::class, 'add']);
+Route::post('/record/store', [RecordController::class, 'store']);
+Route::get('/record/{id}', [RecordController::class, 'view']);
+
+#artist route
+Route::get('/artists', [ArtistController::class, 'index']);
